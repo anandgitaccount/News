@@ -1,0 +1,20 @@
+.topHeadline{
+    animation: move 80s linear  infinite;
+   
+    
+}
+
+.mainDiv:hover .topHeadline{
+    animation-play-state: paused;
+    cursor: grab;
+    
+}
+@keyframes move{
+    0%{
+        transform: translateY(0%);
+        
+    }
+    100%{
+        transform: translateY(-100%);
+    }
+}
