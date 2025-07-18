@@ -11,7 +11,7 @@ const Home = () => {
      console.log(ctx.search)
 
     let getAllData=async()=>{
-        let res=await fetch(`https://newsapi.org/v2/everything?q=${ctx.search?ctx.search:'world'}&apiKey=7e753cc228274f60b6942b35efc8d932`);
+        let res=await fetch(`https://newsapi.org/v2/everything?q=${ctx.search?ctx.search:'world'}&apiKey=4916d5b5109845c5b43ffdd6cbfaa3b0`);
         let data= await res.json();
         setArticles(data.articles)
       
@@ -28,7 +28,7 @@ const Home = () => {
 
   return (
     <>
-      <div className='flex w-[100%] sm:w-[74%] md:w-[80%%] p-2 absolute justify-between mt-[75px] '>
+      <div className='flex w-[100%] sm:w-[74%] md:w-[72%] p-2 absolute justify-between mt-[75px] '>
         <div className=' gap-2 grid grid-cols-12 h-auto   ' >
         {
           articles.map((ele)=>{
@@ -43,7 +43,7 @@ const Home = () => {
         }
 
         </div>
-        <div className=' bg-red-500 w-72 w-[26%] hidden sm:block md:block  fixed overflow-hidden right-0   '>
+        <div className=' bg-red-500  w-[26%] hidden sm:block md:block  fixed overflow-hidden right-0   '>
         <h2 className='  text-center absolute font-bold bg-gray-500 h-8 w-[100%] z-50'>Top Headline</h2>
        <div className='mainDiv'>
         <div className=' topHeadline '>
